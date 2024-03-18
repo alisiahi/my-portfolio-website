@@ -33,7 +33,7 @@ const Work = async () => {
         </div>
         {/* slider */}
         <div className="mx-auto lg:w-1/2 flex items-center justify-center">
-          <Carousel className="w-full max-w-xs md:max-w-md">
+          <Carousel className="w-full max-w-[200px] md:max-w-md">
             <CarouselContent>
               {projects.map((project) => (
                 <CarouselItem key={project.id}>

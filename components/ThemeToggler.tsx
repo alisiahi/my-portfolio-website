@@ -28,6 +28,7 @@ export default function ThemeToggler() {
           <DropdownMenuItem
             onClick={() => setTheme(theme)}
             className="capitalize"
+            key={theme}
           >
             {theme}
           </DropdownMenuItem>
