@@ -2,6 +2,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
+import { Dispatch, SetStateAction } from "react";
+
 const links = [
   { path: "/", name: "home" },
   { path: "/projects", name: "my projects" },
@@ -12,9 +14,17 @@ interface NavProps {
   containerStyles: string;
   linkStyles: string;
   underlineStyles: string;
+  setSheetOpen?: Dispatch<SetStateAction<boolean>>;
+  sheetOpen?: boolean;
 }
 
-const Nav = ({ containerStyles, linkStyles, underlineStyles }: NavProps) => {
+const Nav = ({
+  containerStyles,
+  linkStyles,
+  underlineStyles,
+  setSheetOpen = () => {},
+  sheetOpen,
+}: NavProps) => {
   const path = usePathname();
 
   return (
@@ -25,6 +35,7 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }: NavProps) => {
             href={link.path}
             key={index}
             className={`capitalize ${linkStyles}`}
+            onClick={() => setSheetOpen && setSheetOpen(false)} // Check if setSheetOpen exists before invoking it
           >
             {link.path === path && (
               <motion.span
