@@ -212,7 +212,7 @@ const About = async () => {
                       <h4 className="text-xl font-semibold mb-2">Skills</h4>
                       <div className="border-b border-border mb-4"></div>
                       {/* skill list */}
-                      <div>
+                      <div className="grid md:grid-cols-2 gap-y-4">
                         {skills.map((skill) => {
                           return (
                             <div

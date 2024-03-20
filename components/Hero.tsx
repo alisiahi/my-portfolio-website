@@ -18,7 +18,7 @@ const Hero = async () => {
   return (
     <section className="py-14">
       <div className="container mx-auto">
-        <div className="flex justify-between gap-x-8">
+        <div className="flex flex-col items-center lg:flex-row  justify-between gap-x-8">
           {/* text */}
           <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left gap-8">
             <div className="text-base uppercase font-semibold mb-4 text-primary tracking-[4px]">
@@ -54,7 +54,7 @@ const Hero = async () => {
             width={500}
             height={500}
             src={"/hero-image.jpg"}
-            className="hidden lg:flex rounded-full bg-primary w-[500px] h-[500px] shadow-xl shadow-primary border-1 border-primary"
+            className="rounded-full bg-primary sm:w-[300px] sm:h-[300px] md:w-[500px] md:h-[500px] shadow-xl shadow-primary border-1 border-primary mt-20"
             alt="hero image"
           />
         </div>
