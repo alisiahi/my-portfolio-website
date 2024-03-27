@@ -10,7 +10,7 @@ import {
 
 const icons = [
   {
-    path: "https://www.linkedin.com/in/ali--siahi/",
+    path: "https://www.linkedin.com/in/ali-siahi/",
     name: <RiLinkedinFill />,
   },
   {
